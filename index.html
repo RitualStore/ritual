@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ритуальные услуги</title>
+    <style>
+        /* ===== ОБЩИЕ СТИЛИ ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f7f5f2;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== ШАПКА ===== */
+        header {
+            background-color: #1a1a1a;
+            color: #e0d5c1;
+            padding: 25px 0;
+            border-bottom: 4px solid #b8a07c;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            letter-spacing: 8px;
+            font-weight: normal;
+            color: #e0d5c1;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            color: #a0907a;
+            margin-top: 5px;
+        }
+
+        .phone-header {
+            margin-top: 12px;
+            font-size: 1.3rem;
+            color: #c9b696;
+            letter-spacing: 2px;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        nav {
+            background-color: #2c2c2c;
+            padding: 12px 0;
+            text-align: center;
+            border-bottom: 1px solid #444;
+        }
+
+        nav a {
+            color: #d4c9b8;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #f5e7d3;
+            border-bottom: 1px solid #b8a07c;
+            padding-bottom: 5px;
+        }
+
+        /* ===== ГЛАВНЫЙ БАННЕР ===== */
+        .banner {
+            background: linear-gradient(135deg, #2a2724 0%, #1a1816 100%);
+            color: #e8ddd0;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 30px 0 50px;
+            border-radius: 12px;
+            border-left: 6px solid #b8a07c;
+        }
+
+        .banner h2 {
+            font-size: 2.2rem;
+            font-weight: normal;
+            letter-spacing: 4px;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            color: #b8aa96;
+            margin-top: 15px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .banner .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 50px;
+            background-color: #b8a07c;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            border-radius: 40px;
+            transition: background 0.3s;
+        }
+
+        .banner .btn:hover {
+            background-color: #d4be9a;
+        }
+
+        /* ===== КАТАЛОГ ТОВАРОВ ===== */
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            letter-spacing: 4px;
+            color: #2a2724;
+            margin: 60px 0 15px;
+            border-bottom: 2px solid #d4c9b8;
+            padding-bottom: 15px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6a5f50;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* ===== КАРТОЧКА ТОВАРА ===== */
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: 1px solid #e6dfd6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+            border-color: #b8a07c;
+        }
+
+        .product-image {
+            height: 220px;
+            background-color: #e8e0d6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.8rem;
+            color: #5a4f40;
+            border-bottom: 1px solid #ddd;
+            /* Сюда можно вставить реальную картинку через background-image: url(...) */
+        }
+
+        .product-info {
+            padding: 20px 20px 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-info h3 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            letter-spacing: 1px;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .product-info .material {
+            font-size: 0.85rem;
+            color: #8a7e6e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .product-info .description {
+            font-size: 0.95rem;
+            color: #4a4035;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2a2724;
+            letter-spacing: 1px;
+        }
+
+        .product-price small {
+            font-size: 0.8rem;
+            font-weight: normal;
+            color: #7a6f5e;
+        }
+
+        .btn-order {
+            background-color: #2a2724;
+            color: #e8ddd0;
+            border: none;
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            letter-spacing: 1px;
+            font-family: inherit;
+        }
+
+        .btn-order:hover {
+            background-color: #b8a07c;
+            color: #1a1a1a;
+        }
+
+        /* ===== КАК ДОБАВЛЯТЬ НОВЫЕ ТОВАРЫ (инструкция) ===== */
+        .how-to-add {
+            background-color: #e8e0d6;
+            padding: 30px;
+            margin: 60px 0 30px;
+            border-radius: 12px;
+            border-left: 6px solid #b8a07c;
+        }
+
+        .how-to-add h3 {
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+        }
+
+        .how-to-add code {
+            background-color: #2c2c2c;
+            color: #f5e7d3;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 5px 0;
+        }
+
+        .how-to-add .step {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        /* ===== ПОДВАЛ ===== */
+        footer {
+            background-color: #1a1a1a;
+            color: #7a6f5e;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 60px;
+            border-top: 4px solid #b8a07c;
+            letter-spacing: 1px;
+        }
+
+        footer span {
+            color: #b8a07c;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+                letter-spacing: 4px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 12px;
+                font-size: 0.85rem;
+            }
+
+            .banner h2 {
+                font-size: 1.6rem;
+            }
+
+            .catalog-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 20px;
+            }
+
+            .product-image {
+                height: 160px;
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .catalog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .banner {
+                padding: 35px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== ШАПКА ===== -->
+    <header>
+        <div class="container">
+            <h1>☦ Ритуальный магазин </h1>
+            <div class="phone-header">📞 +7 (914) 123-65-30 (с 11:00 - 18:00)</div>
+        </div>
+    </header>
+
+    <!-- ===== НАВИГАЦИЯ ===== -->
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#">Услуги</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+    </nav>
+
+    <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+    <main class="container">
+
+        
+
+        <!-- ========================================================= -->
+        <!--  ЗДЕСЬ НАЧИНАЕТСЯ КАТАЛОГ ТОВАРОВ (ПРОДУКТЫ ДЛЯ ПРОДАЖИ)  -->
+        <!-- ========================================================= -->
+        <h2 class="section-title" id="catalog">🕯 Каталог товаров</h2>
+        <p class="subtitle">Выберите достойные изделия для прощания</p>
+
+        <div class="catalog-grid">
+            <!-- 
+                ======================================================
+                КАК ДОБАВИТЬ НОВЫЙ ТОВАР:
+                1. Скопируйте блок от <!-- КАРТОЧКА --> до 
+                2. Вставьте его ниже перед закрывающим </div>
+                3. Измените: название, цену, описание и иконку (emoji)
+                ======================================================
+            -->
+
+            <!-- КАРТОЧКА ТОВАРА №1 -->
+            <div class="product-card">
+                <div class="product-image">⚰️</div>
+                <div class="product-info">
+                    <h3>Гроб деревянный «Классик»</h3>
+                    <div class="material">Сосна, обивка атлас</div>
+                    <p class="description">Строгий дизайн, натуральное дерево, внутри атласная подушка. Размеры: 200x75 см.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">18 900 ₽ <small>цена</small></span>
+                        <button class="btn-order">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- КАРТОЧКА ТОВАРА №2 -->
+            <div class="product-card">
+                <div class="product-image">🕊️</div>
+                <div class="product-info">
+                    <h3>Венок траурный «Память»</h3>
+                    <div class="material">Хвоя, искусственные цветы</div>
+                    <p class="description">Элегантный венок с белыми розами и лентой с надписью "Светлая память". Диаметр 70 см.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">4 200 ₽ <small>цена</small></span>
+                        <button class="btn-order">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- КАРТОЧКА ТОВАРА №3 -->
+            <div class="product-card">
+                <div class="product-image">✝️</div>
+                <div class="product-info">
+                    <h3>Крест могильный «Спас»</h3>
+                    <div class="material">Металл с покрытием, высота 150 см</div>
+                    <p class="description">Кованый крест с распятием, покрыт антикоррозийным составом. Подходит для установки на любом кладбище.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">11 300 ₽ <small>цена</small></span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- КАРТОЧКА ТОВАРА №4 -->
+            <div class="product-card">
+                <div class="product-image">🏺</div>
+                <div class="product-info">
+                    <h3>Урна для праха «Вечность»</h3>
+                    <div class="material">Керамика, ручная роспись</div>
+                    <p class="description">Изысканная урна с золотым орнаментом. Герметичная крышка. Объем 3 литра.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">7 800 ₽ <small>цена</small></span>
+                        <button class="btn-order">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- КАРТОЧКА ТОВАРА №5 (ДОБАВЛЕН НОВЫЙ ТОВАР ПРИМЕР) -->
+            <div class="product-card">
+                <div class="product-image">🌿</div>
+                <div class="product-info">
+                    <h3>Подушка траурная «Утешение»</h3>
+                    <div class="material">Бархат, золотая вышивка</div>
+                    <p class="description">Декоративная подушка для гроба с вышитым крестом и молитвой.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">3 200 ₽ <small>цена</small></span>
+                        <button class="btn-order">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- КАРТОЧКА ТОВАРА №6 (ЕЩЕ ОДИН ПРИМЕР) -->
+            <div class="product-card">
+                <div class="product-image">🕯️</div>
+                <div class="product-info">
+                    <h3>Набор свечей «Молитва» (6 шт)</h3>
+                    <div class="material">Воск, 25 см</div>
+                    <p class="description">Набор церковных свечей в красивой упаковке для поминального стола.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">1 200 ₽ <small>цена</small></span>
+                        <button class="btn-order">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ===== КОНЕЦ КАТАЛОГА ===== -->
+
+        <!-- ===== ИНСТРУКЦИЯ ПО ДОБАВЛЕНИЮ ТОВАРОВ (ПРЯМО НА САЙТЕ) ===== -->
+        <div class="how-to-add">
+            <h3>📌 Как добавить новый товар в этот каталог?</h3>
+            <div class="step">
+                <p><strong>1.</strong> Откройте этот файл <code>ritual.html</code> в Блокноте.</p>
+                <p><strong>2.</strong> Найдите в коде раздел <code>&lt;!-- КАРТОЧКА ТОВАРА --&gt;</code>.</p>
+                <p><strong>3.</strong> Скопируйте один готовый блок <code>&lt;div class="product-card"&gt;...&lt;/div&gt;</code> и вставьте его перед закрывающим <code>&lt;/div&gt;</code> каталога.</p>
+                <p><strong>4.</strong> Измените внутри:</p>
+                <ul style="margin-left: 25px; color: #3a3025;">
+                    <li><strong>Текст:</strong> название, описание, цену.</li>
+                    <li><strong>Иконку (emoji):</strong> замените ⚰️, 🕊️, ✝️ и т.д. на свой символ.</li>
+                    <li><strong>Класс "material":</strong> напишите материал или размер.</li>
+                </ul>
+                <p><strong>5.</strong> Сохраните файл (Ctrl+S) и обновите страницу в браузере (F5) — товар появится!</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===== ПОДВАЛ ===== -->
+    <footer>
+        <div class="container">
+            <p>☦ <span></span> — Ритуальный магазин © 2026</p>
+            <p style="margin-top: 8px; font-size: 0.9rem;">пгт. Новая Чара , ул. Юбилейная, д. 5г | Работаем с 11:00 - 18:00</p>
+        </div>
+    </footer>
+
+</body>
+</html>
