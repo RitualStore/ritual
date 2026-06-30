@@ -391,23 +391,20 @@
 
     <!-- ===== НАВИГАЦИЯ (только каталог) ===== -->
     <nav>
-        <a href="#catalog">📋 Перейти в каталог</a>
+        <a href="#catalog">📋 Перейти в каталог товаров в наличии</a>
+    </nav>
+<nav>
+        <a href="#custom-order">📋 Изделия под заказ</a>
     </nav>
 
     <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
     <main class="container">
 
-        <!-- Баннер -->
-        <section class="banner">
-            <h2></h2>
-    
-            <a href="#catalog" class="btn">Смотреть каталог</a>
-        </section>
-
+        
         <!-- ========================================================= -->
         <!--  КАТАЛОГ С РАЗДЕЛАМИ (КАТЕГОРИЯМИ)                       -->
         <!-- ========================================================= -->
-        <h2 class="section-title" id="catalog">🕯 Каталог товаров</h2>
+        <h2 class="section-title" id="catalog">🕯 Товары в наличии</h2>
         <p class="subtitle">Выберите категорию и достойные изделия для прощания</p>
 
         <!-- ===== РАЗДЕЛ 1: ГРОБЫ ===== -->
@@ -554,9 +551,9 @@
             </div>
         </div>
 
-        <!-- ===== РАЗДЕЛ 4: СКАМЕЙКИ И СТОЛЫ ===== -->
+         <!-- ===== РАЗДЕЛ 4: СКАМЕЙКИ ===== -->
         <div class="category">
-            <div class="category-title"><span>🪑</span> Скамейки и столы</div>
+            <div class="category-title"><span>🪑</span> Скамейки</div>
             <div class="category-desc">Садово-парковая мебель для обустройства мест захоронения</div>
             <div class="catalog-grid">
                 <div class="product-card">
@@ -571,7 +568,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+               
+                <!-- ===== РАЗДЕЛ 5: СТОЛЫ ===== -->
+        <div class="category">
+            <div class="category-title"><span>🪑</span> Столы</div>
+            
+            <div class="product-card">
                     <div class="product-image">🪑</div>
                     <div class="product-info">
                         <h4>Стол</h4>
@@ -598,7 +600,7 @@
             </div>
         </div>
 
-        <!-- ===== РАЗДЕЛ 5: КРЕСТЫ ===== -->
+        <!-- ===== РАЗДЕЛ 6: КРЕСТЫ ===== -->
         <div class="category">
             <div class="category-title"><span>✝️</span> Кресты</div>
             <div class="category-desc">Могильные кресты из металла, дерева, с покрытием</div>
@@ -642,7 +644,7 @@
             </div>
         </div>
 
-        <!-- ===== РАЗДЕЛ 6: СВЕЧИ ===== -->
+        <!-- ===== РАЗДЕЛ 7: СВЕЧИ ===== -->
         <div class="category">
             <div class="category-title"><span>🕯️</span> Свечи</div>
             <div class="category-desc">Церковные, траурные и поминальные свечи разных размеров</div>
@@ -679,6 +681,58 @@
                         <p class="description">Коробка тонких свечей для лампад.</p>
                         <div class="product-bottom">
                             <span class="product-price">980 ₽</span>
+                                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!--  РАЗДЕЛ "ИЗДЕЛИЯ ПОД ЗАКАЗ" (те же товары)               -->
+        <!-- ========================================================= -->
+        <h2 class="section-title" id="custom-order">🕯 Изделия под заказ</h2>
+        <p class="subtitle">Те же товары, но изготовленные индивидуально по вашим параметрам</p>
+
+        </section>
+
+        <!-- ===== РАЗДЕЛ 1: ГРОБЫ ===== -->
+        <div class="category">
+            <div class="category-title"><span>⚰️</span> Гробы</div>
+            <div class="category-desc">Деревянные, обитые тканью, полированные и лакированные модели</div>
+            <div class="catalog-grid">
+                <div class="product-card">
+                    <div class="product-image">⚰️</div>
+                    <div class="product-info">
+                        <h4>Гроб «Классик»</h4>
+                        <div class="material">Сосна, атласная обивка</div>
+                        <p class="description">Строгий дизайн, размер 200x705 см, внутренняя подушка.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">18 900 ₽</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">⚰️</div>
+                    <div class="product-info">
+                        <h4>Гроб «Премьер»</h4>
+                        <div class="material">Дуб, полировка, бархат</div>
+                        <p class="description">Элитный гроб с золотым крестом и ручками. 210x80 см.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">34 500 ₽</span>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">⚰️</div>
+                    <div class="product-info">
+                        <h4>Гроб «Стандарт» эконом</h4>
+                        <div class="material">ДСП, тканевая обивка</div>
+                        <p class="description">Бюджетный вариант, размер 190x70 см.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">8 200 ₽</span>
                             
                         </div>
                     </div>
@@ -686,136 +740,242 @@
             </div>
         </div>
 
-        <!-- ===== РАЗДЕЛ 7: ОДЕЖДА ===== -->
+        <!-- ===== РАЗДЕЛ 2: ВЕНКИ ===== -->
         <div class="category">
-            <div class="category-title"><span>👔</span> Одежда</div>
-            <div class="category-desc">Траурная одежда для усопших: костюмы, платья, рубашки</div>
+            <div class="category-title"><span>🌿</span> Венки</div>
+            <div class="category-desc">Траурные венки из хвои, искусственных и живых цветов</div>
             <div class="catalog-grid">
                 <div class="product-card">
-                    <div class="product-image">👔</div>
+                    <div class="product-image">🌿</div>
                     <div class="product-info">
-                        <h4>Костюм мужской «Классик»</h4>
-                        <div class="material">Черный, 48-56 размер</div>
-                        <p class="description">Брюки, пиджак, белая рубашка.</p>
-                        <div class="product-bottom">
-                            <span class="product-price">7 500 ₽</span>
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">👗</div>
-                    <div class="product-info">
-                        <h4>Платье женскоЕ</h4>
-                        <div class="material">Черный шелк, 46-52 размер</div>
-                        <p class="description">Длинное платье с кружевным воротником.</p>
-                        <div class="product-bottom">
-                            <span class="product-price">5 900 ₽</span>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">👔</div>
-                    <div class="product-info">
-                        <h4>Рубашка белая</h4>
-                        <div class="material">Хлопок, 42-50 размер</div>
-                        <p class="description">Классическая рубашка для мужчин.</p>
-                        <div class="product-bottom">
-                            <span class="product-price">1 800 ₽</span>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">👔</div>
-                    <div class="product-info">
-                        <h4>Костюм детский</h4>
-                        <div class="material">Черный, 32-38 размер</div>
-                        <p class="description">Костюм для мальчика, размеры 5-14 лет.</p>
+                        <h4>Венок «Память»</h4>
+                        <div class="material">Хвоя, белые розы</div>
+                        <p class="description">Диаметр 70 см, лента с надписью "Светлая память".</p>
                         <div class="product-bottom">
                             <span class="product-price">4 200 ₽</span>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== РАЗДЕЛ 8: ЛЕНТЫ ДЛЯ ВЕНКОВ И ПРОЧЕЕ ===== -->
-        <div class="category">
-            <div class="category-title"><span>🎗️</span> Ленты и прочее</div>
-            <div class="category-desc">Траурные ленты, банты, подушки, покрывала и аксессуары</div>
-            <div class="catalog-grid">
-                <div class="product-card">
-                    <div class="product-image">🎗️</div>
-                    <div class="product-info">
-                        <h4>Лента траурная «Светлая память»</h4>
-                        <div class="material">Атлас, черная с золотом</div>
-                        <p class="description">Длина 2 метра, ширина 10 см.</p>
-                        <div class="product-bottom">
-                            <span class="product-price">890 ₽</span>
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🎗️</div>
-                    <div class="product-info">
-                        <h4>Лента «Скорбим»</h4>
-                        <div class="material">Сатин, черная с серебром</div>
-                        <p class="description">Длина 1.8 метра, ширина 8 см.</p>
-                        <div class="product-bottom">
-                            <span class="product-price">750 ₽</span>
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">📿</div>
-                    <div class="product-info">
-                        <h4>Подушка</h4>
-                        <div class="material">Бархат, вышивка</div>
-                        <p class="description">Для гроба, с крестом.</p>
-                        <div class="product-bottom">
-                            <span class="product-price">3 200 ₽</span>
                             
                         </div>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🕊️</div>
+                    <div class="product-image">🌿</div>
                     <div class="product-info">
-                        <h4>Бант траурный</h4>
-                        <div class="material">Атлас, черный</div>
-                        <p class="description">Для венка или корзины, диаметр 25 см.</p>
+                        <h4>Венок «Утешение»</h4>
+                        <div class="material">Хвоя, красные гвоздики</div>
+                        <p class="description">Диаметр 65 см, лента с молитвой.</p>
                         <div class="product-bottom">
-                            <span class="product-price">550 ₽</span>
+                            <span class="product-price">3 800 ₽</span>
                         
                         </div>
                     </div>
                 </div>
+                <div class="product-card">
+                    <div class="product-image">🌿</div>
+                    <div class="product-info">
+                        <h4>Венок «Вечная слава»</h4>
+                        <div class="material">Ель, искусственные цветы</div>
+                        <p class="description">Диаметр 90 см, усиленная конструкция.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">6 500 ₽</span>
+                           
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- ===== ИНСТРУКЦИЯ ПО ДОБАВЛЕНИЮ ===== -->
-        <div class="how-to-add">
-            <h3>📌 Как добавить новый товар в любой раздел?</h3>
-            <div class="step">
-                <p><strong>1.</strong> Откройте файл <code>ritual.html</code> в Блокноте.</p>
-                <p><strong>2.</strong> Найдите нужную категорию (например, «Гробы»). Внутри нее есть блок <code>&lt;div class="catalog-grid"&gt;...&lt;/div&gt;</code>.</p>
-                <p><strong>3.</strong> Скопируйте карточку:</p>
-                <code>&lt;div class="product-card"&gt;...&lt;/div&gt;</code>
-                <p><strong>4.</strong> Вставьте её внутрь сетки (перед <code>&lt;/div&gt;</code>) и измените:</p>
-                <ul>
-                    <li><strong>Название:</strong> между <code>&lt;h4&gt;</code> и <code>&lt;/h4&gt;</code></li>
-                    <li><strong>Материал:</strong> между <code>&lt;div class="material"&gt;</code></li>
-                    <li><strong>Описание:</strong> между <code>&lt;p class="description"&gt;</code></li>
-                    <li><strong>Цену:</strong> цифры между <code>&lt;span class="product-price"&gt;</code> и <code>&lt;/span&gt;</code></li>
-                    <li><strong>Иконку (emoji):</strong> замените на любой символ</li>
-                </ul>
-                <p><strong>5.</strong> Сохраните (Ctrl+S) и обновите страницу (F5).</p>
+        <!-- ===== РАЗДЕЛ 3: ПАМЯТНИКИ ===== -->
+        <div class="category">
+            <div class="category-title"><span>🪦</span> Памятники</div>
+            <div class="category-desc">Изготовление и установка памятников из гранита, мрамора, бетона</div>
+            <div class="catalog-grid">
+                <div class="product-card">
+                    <div class="product-image">🪦</div>
+                    <div class="product-info">
+                        <h4>Памятник «Стела»</h4>
+                        <div class="material">Гранит, полировка</div>
+                        <p class="description">Вертикальная стела 120x80 см, гравировка портрета.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">45 000 ₽</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪦</div>
+                    <div class="product-info">
+                        <h4>Памятник «Крест»</h4>
+                        <div class="material">Мраморная крошка</div>
+                        <p class="description">Крест с подставкой, высота 180 см.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">28 000 ₽</span>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪦</div>
+                    <div class="product-info">
+                        <h4>Памятник «Ангел»</h4>
+                        <div class="material">Белый мрамор</div>
+                        <p class="description">Фигура ангела на постаменте, высота 140 см.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">67 000 ₽</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪦</div>
+                    <div class="product-info">
+                        <h4>Памятник «Сердце»</h4>
+                        <div class="material">Бетон, мраморная крошка</div>
+                        <p class="description">Бюджетный вариант с гравировкой.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">19 500 ₽</span>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- ===== РАЗДЕЛ 4: СКАМЕЙКИ ===== -->
+        <div class="category">
+            <div class="category-title"><span>🪑</span> Скамейки</div>
+            <div class="category-desc">Садово-парковая мебель для обустройства мест захоронения</div>
+            <div class="catalog-grid">
+                <div class="product-card">
+                    <div class="product-image">🪑</div>
+                    <div class="product-info">
+                        <h4>Скамейка «Классика»</h4>
+                        <div class="material">Металл, дерево</div>
+                        <p class="description">Кованая скамья с деревянными планками, длина 120 см.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">9 200 ₽</span>
+                       
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- ===== РАЗДЕЛ 5: СТОЛЫ ===== -->
+        <div class="category">
+            <div class="category-title"><span>🪑</span> Столы</div>
+            
+            <div class="product-card">
+                    <div class="product-image">🪑</div>
+                    <div class="product-info">
+                        <h4>Стол</h4>
+                        <div class="material">Металл, ДСП</div>
+                        <p class="description">Складной стол 80x120 см.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">6 800 ₽</span>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪑</div>
+                    <div class="product-info">
+                        <h4>Скамейка «Садовка»</h4>
+                        <div class="material">Чугун, дерево</div>
+                        <p class="description">Утяжеленная скамья для кладбища, длина 150 см.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">13 400 ₽</span>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== РАЗДЕЛ 6: КРЕСТЫ ===== -->
+        <div class="category">
+            <div class="category-title"><span>✝️</span> Кресты</div>
+            <div class="category-desc">Могильные кресты из металла, дерева, с покрытием</div>
+            <div class="catalog-grid">
+                <div class="product-card">
+                    <div class="product-image">✝️</div>
+                    <div class="product-info">
+                        <h4>Крест «Спас»</h4>
+                        <div class="material">Металл</div>
+                        <p class="description">Высота 150 см, с распятием.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">11 300 ₽</span>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">✝️</div>
+                    <div class="product-info">
+                        <h4>Крест «Дубовый»</h4>
+                        <div class="material">Дуб, лак</div>
+                        <p class="description">Деревянный крест, высота 170 см.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">8 900 ₽</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">✝️</div>
+                    <div class="product-info">
+                        <h4>Крест «Золотой»</h4>
+                        <div class="material">Алюминий, позолота</div>
+                        <p class="description">Высота 120 см, декоративный.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">14 700 ₽</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== РАЗДЕЛ 7: СВЕЧИ ===== -->
+        <div class="category">
+            <div class="category-title"><span>🕯️</span> Свечи</div>
+            <div class="category-desc">Церковные, траурные и поминальные свечи разных размеров</div>
+            <div class="catalog-grid">
+                <div class="product-card">
+                    <div class="product-image">🕯️</div>
+                    <div class="product-info">
+                        <h4>Набор «Молитва» (6 шт)</h4>
+                        <div class="material">Воск, 25 см</div>
+                        <p class="description">Набор церковных свечей в упаковке.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">1 200 ₽</span>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🕯️</div>
+                    <div class="product-info">
+                        <h4>Свеча траурная большая</h4>
+                        <div class="material">Парафин, 40 см</div>
+                        <p class="description">Одиночная свеча для поминального стола.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">450 ₽</span>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🕯️</div>
+                    <div class="product-info">
+                        <h4>Свечи «Память» (12 шт)</h4>
+                        <div class="material">Воск, 15 см</div>
+                        <p class="description">Коробка тонких свечей для лампад.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">980 ₽</span>
+                                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
         </div>
 
     </main>
@@ -823,10 +983,11 @@
     <!-- ===== ПОДВАЛ ===== -->
     <footer>
         <div class="container">
-            <p>☦ <span></span> — Ритуальный магазин ИП Соловьева Наталья Владмировна© 2026</p>
-            <p style="margin-top: 8px; font-size: 0.9rem;">пгт. Новая Чара, ул. Юбилейная, д. 1в | Работаем с 11:00-14:00/с 15:00-18:00 по звонку</p>
+            <p>☦ <span></span> Ритуальный магазин ИП Соловьева Наталья Владмировна© 2026</p>
+            <p style="margin-top: 8px; font-size: 0.9rem;">пгт. Новая Чара, ул. Юбилейная, д. 1в | Работаем с 11:00-13:00/с 15:00-18:00 по звонку</p>
         </div>
     </footer>
 
 </body>
 </html>
+
